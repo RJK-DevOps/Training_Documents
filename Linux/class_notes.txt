@@ -608,6 +608,40 @@ Next :::
 
 	SHELL Scripting!	
 
+-c: creates a new .tar archive file
+-v: verbosely shows the tar process so you can see all the steps in the process
+-f: specifies the file name type of the archive file
+-x: extracts files from an existing .tar file
+
+    -cf: Use when you want to create a simple tar archive without compression.
+
+    -czvf: Use when you want to create a compressed tar.gz archive and see the processing output.
+
+Tar.gz files add compression to the archive function of the tar command by using the gzip function.
+
+You need to add only the -z option to the basic tar command to add compression, as shown in the
+following example:
+
+$ tar -zcvf <archive name>.tar.gz /directory/you/want/to/compress
+
+tar.bz2
+
+Let’s say you have an extra-large directory that you want to compress as much as possible.
+If tar.gz results in an over-sized file, try using tar.bz2 instead. Note that this option does take a little
+longer.
+
+This archive method adds only one new option: -j, as shown in the following example:
+
+$ tar -jcvf <archive name>.tar.bz2 /directory/to/compress
+OR
+$ tar -jcvf <archive name>.tar.bz2 ‘*.jpg’
+
+Again, to extract a .tar.bz2 file, switch the -c for -x, as shown in the following examples:
+
+$ tar -jxvf <archive name>.tar.bz2
+OR
+$ tar -jxvf <archive name>.tar.bz2 -C /directory/to/extract/to/
+
 
 #######################
 Day 19: 21st Aug. 2024
