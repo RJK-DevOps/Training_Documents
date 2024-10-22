@@ -493,7 +493,9 @@ Day 18: 19th Aug. 2024
 			r - Read only Access 
 			w - Write Access 
 			x - Execute Access	
-			
+
+
+sudo chmod u=rwx,g=rwx,o=rwx filename			
 
 	User Management ::::::
 	
